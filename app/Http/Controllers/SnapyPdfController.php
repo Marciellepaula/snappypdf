@@ -121,9 +121,9 @@ class snapyPdfController extends Controller
         </div>
     </div>
 </div>';
-        $css = file_get_contents('https://cdn.todacarreira.com/curriculum.011.css');
+        $css = file_get_contents(public_path('css/index.css'));
         $htm = '<style>' . $css . '</style>' . '<body>' . $html . '</body>';
-
+        var_dump($css);
         $pdf = \PDF::html($htm);
         return $pdf->download('document.pdf');
     }
