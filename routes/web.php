@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SnapyPdfController;
+use App\Http\Controllers\PdfController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,12 @@ use App\Http\Controllers\SnapyPdfController;
 |
 */
 
+
+Route::get('/send-welcome-email', [WelcomeController::class, 'sendWelcomeEmail']);
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dowloadpdf', [SnapyPdfController::class, 'dowloadpdf']);
+
+Route::get('graphs', [PdfController::class, 'graphs']);
+Route::get('graphPdf', [PdfController::class, 'graphPdf']);
