@@ -22,7 +22,12 @@ class WelcomeController extends Controller
         $apiInstance = new TransactionalEmailsApi(null, $config);
 
         // Recupere o e-mail do destinatário dinamicamente do banco de dados
-
+        // $email = new SendSmtpEmail([
+        //     'sender' => new SendSmtpEmailSender(['name' => 'Your Name', 'email' => 'marcielle@hotmail.com']),
+        //     'to' => [['email' => $recipientEmail]],
+        //     'subject' => 'Welcome to our website!',
+        //     'htmlContent' => view('emails.welcome_email')->render(), // Render the email view
+        // ]);
         $recipientEmail = 'marciellepaula@sobral.ce.gov.br'; // Assuming the user's email field is named 'email'
 
         //  Criar uma nova mensagem 
