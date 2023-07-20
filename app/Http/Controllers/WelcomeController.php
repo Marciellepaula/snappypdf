@@ -27,10 +27,10 @@ class WelcomeController extends Controller
 
         //  Criar uma nova mensagem 
         $email = new SendSmtpEmail([
-            'sender' => new SendSmtpEmailSender(['name' => 'Your Name', 'email' => 'smtp-relay.brevo.com']),
+            'sender' => new SendSmtpEmailSender(['name' => 'Your Name', 'email' => 'marcielle@hotmail.com']),
             'to' => [['email' => $recipientEmail]],
             'subject' => 'Welcome to our website!',
-            'htmlContent' => '<p>Thank you for signing up. We are excited to have you on board.</p>',
+            'htmlContent' => '<p>hey girl Thank you for signing up. We are excited to have you on board.</p>',
 
 
         ]);
