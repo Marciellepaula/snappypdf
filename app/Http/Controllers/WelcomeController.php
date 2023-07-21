@@ -36,8 +36,6 @@ class WelcomeController extends Controller
             'to' => [['email' => $recipientEmail]],
             'subject' => 'Welcome to our website!',
             'htmlContent' => '<p>hey girl Thank you for signing up. We are excited to have you on board.</p>',
-
-
         ]);
 
         try {
